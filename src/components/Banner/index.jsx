@@ -1,4 +1,4 @@
-import maskGroup from '../assets/images/Mask-Group.png'
+import maskGroup from '../../assets/images/Mask-Group.png'
 
 function Banner(){
 

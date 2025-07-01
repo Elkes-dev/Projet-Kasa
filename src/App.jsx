@@ -1,8 +1,7 @@
-import {Routes, Route} from 'react-router-dom'
+import AppRouter from './Router/AppRouter.jsx'
 import logement from './logement.json' 
-import Header from './components/Header'
-import Banner from './components/Banner'
-
+import Header from './components/Header/index.jsx'
+import Footer from './components/Footer/index.jsx'
 
 function App() {
   console.log( logement)
@@ -10,7 +9,8 @@ function App() {
     <>
       <div>
         <Header />
-        <Banner />
+        <AppRouter />
+        <Footer />
       </div>
      
     </>
@@ -18,3 +18,5 @@ function App() {
 }
 
 export default App
+
+

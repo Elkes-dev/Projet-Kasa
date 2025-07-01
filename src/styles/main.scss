@@ -1,0 +1,30 @@
+//abstracts
+@import  './abstracts/_mixins.scss';
+@import  './abstracts/variables.scss';
+
+// base
+
+@import './base/base.scss';
+@import './base/reset.scss';
+
+//components
+
+@import './components/Header';
+@import './components/Cards';
+@import './components/Footer';
+
+//layout
+
+@import './layout/_grid';
+
+//pages
+
+@import './pages/Home';
+@import './pages/About';
+
+//themes
+
+@import './themes/themes';
+
+
+

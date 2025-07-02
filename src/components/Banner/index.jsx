@@ -1,10 +1,10 @@
-import maskGroup from '../../assets/images/Mask-Group.png'
 
-function Banner(){
+
+function Banner({image, alt}){
 
     return(
         <div>
-            <img src={maskGroup} alt="image de la page d'accueil"/>
+            <img src={image} alt={alt}/>
         </div>
     )
 }

@@ -1,14 +1,22 @@
+import arrow from '../../assets/images/arrow.png'
 import {useState} from 'react'
-import Arrow from '../../assets/images/arrow.png'
 
-function Collapse(){
+function Collapse({title, children}){
 
-    const [] = useState()
+    const [isOpen, setOpen] = useState(false)
 
     return(
             <div className='collapse'>
-                <title></title>
-                <button onClick={{Arrow}}></button>
+                <h2>{title}</h2>
+                <button onClick={() => setOpen(!isOpen)}>
+                    <img src={arrow} alt='arrow'/>
+                </button>
+                {isOpen && ( 
+                <div className='collapse-text'>
+                    {children}
+                </div>
+                )
+                }   
             </div>
     )
 }

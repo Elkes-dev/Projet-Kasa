@@ -1,7 +1,15 @@
+
+
 .footer{
     background-color: $body-color;
-}
-
-.footer p{
-    color : $white-text;
+    margin-top: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    p{
+        color : $white-text;
+    }
 }

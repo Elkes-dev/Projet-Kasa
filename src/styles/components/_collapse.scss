@@ -1,0 +1,28 @@
+
+
+
+.collapse{
+    background-color: #FF6060;
+    color: $white-text;
+    border-radius: 5px;
+    margin: auto;
+    padding: 10px 20px 10px 15px;
+    position: relative;
+    margin-bottom: 20px;
+    width: 70%;
+
+    &-text{
+        margin: 5px auto;
+        background-color: $background-gallery;
+        width: 70%;
+        
+    }
+   }
+   .fa-chevron-down, .fa-chevron-up{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+   }
+
+   

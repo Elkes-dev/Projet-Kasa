@@ -1,5 +1,5 @@
 //abstracts
-@import  './abstracts/_mixins.scss';
+@import  './abstracts/mixins.scss';
 @import  './abstracts/variables.scss';
 
 // base
@@ -13,6 +13,8 @@
 @import './components/Cards';
 @import './components/Footer';
 @import './components/Banner';
+@import './components/Gallery';
+@import './components/collapse';
 
 //layout
 
@@ -22,6 +24,7 @@
 
 @import './pages/Home';
 @import './pages/About';
+@import './pages/Error';
 
 //themes
 

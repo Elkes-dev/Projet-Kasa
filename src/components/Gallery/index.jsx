@@ -7,7 +7,7 @@ function Gallery({appartements}){
 
     return(
         <>
-        <div>
+        <div className='gallery'>
             {appartements.map((appartement) =>{
            return < Card 
                         nom={appartement.title} 

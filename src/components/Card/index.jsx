@@ -4,12 +4,10 @@ function Card({nom, photo}){
 
     return(
         <>
-        <div>
-            <figure>
-                <img src={photo} alt={nom}/>
-               <figcaption>{nom}</figcaption>
+            <figure className='card'>
+                <img src={photo} alt={nom} className="card-img"/>
+               <figcaption className="card-text">{nom}</figcaption>
             </figure>
-        </div>
         </>
     )
 }

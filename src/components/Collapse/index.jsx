@@ -1,23 +1,27 @@
-import arrow from '../../assets/images/arrow.png'
 import {useState} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Collapse({title, children}){
 
     const [isOpen, setOpen] = useState(false)
 
     return(
+        <>
             <div className='collapse'>
-                <h2>{title}</h2>
-                <button onClick={() => setOpen(!isOpen)}>
-                    <img src={arrow} alt='arrow'/>
-                </button>
+                <div className='collapse-header'>
+                <h2 className="title-collapse">{title}</h2>
+                <FontAwesomeIcon icon= {isOpen ?  faChevronDown : faChevronUp} onClick={() => setOpen(!isOpen)}/>   
+                </div>
+                
+            </div>
                 {isOpen && ( 
                 <div className='collapse-text'>
                     {children}
                 </div>
                 )
                 }   
-            </div>
+        </>
     )
 }
 

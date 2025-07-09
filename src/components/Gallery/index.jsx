@@ -1,4 +1,5 @@
 import Card from '../Card'
+import { Link } from 'react-router-dom'
 
 
 function Gallery({appartements}){
@@ -8,13 +9,16 @@ function Gallery({appartements}){
     return(
         <>
         <div className='gallery'>
-            {appartements.map((appartement) =>{
-           return < Card 
+            {appartements.map((appartement) =>( 
+                
+                <Link to={`/logement/${appartement.id}`}  key={appartement.id}>
+                <Card 
                         nom={appartement.title} 
                         photo={appartement.cover} 
-                        key={appartement.id} />
-                }       
-            )}
+                />
+                </Link>
+                   
+            ))}
         </div>
         </>
     )

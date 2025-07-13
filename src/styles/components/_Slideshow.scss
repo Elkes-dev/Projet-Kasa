@@ -1,0 +1,101 @@
+
+.logement-container{
+    position: relative;
+}
+
+.img-logement{
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+}
+
+.rating{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+}
+.arrow-right{
+    position: absolute;
+    top: 50%;
+    right: 150px;
+    color: $white-text;
+    height: 80px;
+    width: 45px;
+}
+.arrow-left{
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    color: $white-text;
+    height: 80px;
+    width: 45px;
+}
+.logement-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+
+}
+.left-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.title-logement{
+    color: #FF6060;
+    font-size: 36px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+.location-logement{
+    color: #000000;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+
+.tags ul{
+    display: flex;
+    column-gap: 30px;
+    padding-top: 10px;
+    li{
+        list-style: none;
+        background-color: $error-color;
+        color: $white-text;
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+}
+
+.right-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.id-person{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    p{
+        white-space: pre-line;
+    }
+    .photo-person{
+       clip-path: circle(50%);
+    }
+}
+
+.stars{
+    padding-top: 10px;
+    display: flex;
+    column-gap: 10px;
+}
+.data-logement{
+    display: flex;
+    column-gap: 30px;
+    margin: 0 30px;
+}

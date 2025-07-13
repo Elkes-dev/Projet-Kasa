@@ -1,28 +1,45 @@
-
-
+.collapse-wrapper{
+    flex: 1;
+}
 
 .collapse{
     background-color: #FF6060;
-    color: $white-text;
+    color: #FFFFFF;
     border-radius: 5px;
-    margin: auto;
+    margin: 0 auto;
     padding: 10px 20px 10px 15px;
     position: relative;
     margin-bottom: 20px;
-    width: 70%;
-
     &-text{
         margin: 5px auto;
         background-color: $background-gallery;
-        width: 70%;
-        
+        width: 100%;
+        color: $body-color;
     }
    }
-   .fa-chevron-down, .fa-chevron-up{
+
+   .collapse-about{
+    width: 70%;
+   }
+   .collapse-logement-description{
+    width: 100%;
+   }
+   .collapse-logement-equipements{
+    width: 100%;
+   }
+   
+   .equipements ul li{
+        list-style: none;
+   }
+   .arrow-icon{
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(0deg);
+    transition: 0.3s ease;
    }
-
+    .arrow-icon.rotate{
+    transform: translateY(-50%) rotate(-360deg);
+    transition: 0.3s ease;
+}
    

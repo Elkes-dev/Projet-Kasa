@@ -30,16 +30,16 @@ function Slideshow({pictures}){
 
     return(
         <>
-            <div className="logementConainer">
+            <div className="logement-container">
                 <img src={pictures[index]} alt="logement"  className="img-logement"/>
 
                 {pictures.length > 1 && (
                 <>
-                    <div>
+                    <div className="rating">
                     {index + 1} / {pictures.length}
                     </div>
-                    <FontAwesomeIcon icon={faChevronLeft} onClick={handlePrev}/>
-                    <FontAwesomeIcon icon={faChevronRight}  onClick={handleNext}/>
+                    <FontAwesomeIcon icon={faChevronLeft} onClick={handlePrev} className="arrow-left"/>
+                    <FontAwesomeIcon icon={faChevronRight}  onClick={handleNext} className="arrow-right"/>
                 </>
                 )} 
             </div>

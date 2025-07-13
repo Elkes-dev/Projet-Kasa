@@ -8,8 +8,8 @@ function Collapse({title, children, className=''}){
 
     return(
         <>
-            <div className='collapse-wrapper'>
-                <div className={`collapse ${className}`}>
+            <div className={`collapse-wrapper ${className}`}>
+                <div className='collapse'>
                     <div className='collapse-header'>
                     <h2 className="title-collapse">{title}</h2>
                     <FontAwesomeIcon 

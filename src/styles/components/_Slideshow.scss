@@ -21,7 +21,8 @@
 .arrow-right{
     position: absolute;
     top: 50%;
-    right: 150px;
+    right: 100px;
+    transform: translate(50%,-50%);
     color: $white-text;
     height: 80px;
     width: 45px;
@@ -29,7 +30,8 @@
 .arrow-left{
     position: absolute;
     top: 50%;
-    left: 150px;
+    left: 100px;
+    transform: translate(-50%,-50%);
     color: $white-text;
     height: 80px;
     width: 45px;

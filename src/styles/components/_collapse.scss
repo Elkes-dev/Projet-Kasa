@@ -4,6 +4,9 @@
 .collapse-wrapper.collapse-about{
     margin: 0 auto;
     width: 70%;
+    @media (min-width: 375px) and (max-width: 768px){
+        width: 90%;
+    }
 }
 
 
@@ -20,8 +23,19 @@
         background-color: $background-gallery;
         width: 100%;
         color: $body-color;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.3s ease, transform 0.8s ease;
+    }
+    &-text.open{
+        max-height: 500px;  /* assez grand pour couvrir tout ton texte */
+        opacity: 1;
+        transform: translateY(0);
     }
    }
+
    .collapse-logement-description, 
    .collapse-logement-equipements{
     width: 100%;
@@ -42,4 +56,7 @@
     transform: translateY(-50%) rotate(-360deg);
     transition: 0.3s ease;
 }
+
+
+
    

@@ -4,11 +4,19 @@
     align-items: center;
     img{
         margin: 0 auto;
+    @media(min-width: 375px) and (max-width: 768px){
+    width: 50%;
+    padding-top: 50px;
+    }
     }
     p{
         color: $error-color;
         font-size: $size-error;
         margin-top: 6rem;
+        @media(min-width: 375px) and (max-width: 768px){
+        text-align: center;
+        font-size: 25px;
+    }
     }
 }
 

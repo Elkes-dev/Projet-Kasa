@@ -20,9 +20,14 @@
         
         &.active {
             border-bottom: 1px solid $body-color;
+            cursor: default;
+        }
+            }
         }
     }
-    }
-    
+    @media (min-width: 375px) and (max-width: 768px) {
+        & img{
+            width: 30%;
+        }
     }
 }

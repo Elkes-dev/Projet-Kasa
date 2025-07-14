@@ -7,7 +7,14 @@ function Home(){
 
     return(
         <>
-         <Banner image={HomeImage} alt='Home-Banner' text='Chez vous, partout et ailleurs' />
+         <Banner image={HomeImage} 
+         alt='Home-Banner'
+          text={
+            <>
+            Chez vous,<br className="line-break"/> partout et ailleurs
+            </>
+          }
+          />
          <Gallery appartements = {logements}/>
         </>
     )

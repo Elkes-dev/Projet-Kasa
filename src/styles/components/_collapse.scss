@@ -1,3 +1,12 @@
+.collapse-wrapper{
+    flex: 1;    
+}
+.collapse-wrapper.collapse-about{
+    margin: 0 auto;
+    width: 70%;
+}
+
+
 .collapse{
     background-color: #FF6060;
     color: #FFFFFF;
@@ -13,25 +22,17 @@
         color: $body-color;
     }
    }
-.collapse-wrapper{
-    flex: 1;    
-}
-.collapse-wrapper.collapse-about{
-    margin: 0 auto;
-    width: 70%;
-}
-   .collapse-logement-description{
-    width: 100%;
-   }
+   .collapse-logement-description, 
    .collapse-logement-equipements{
     width: 100%;
    }
-   
+      
    .equipements ul li{
         list-style: none;
    }
    .arrow-icon{
     position: absolute;
+    cursor: pointer;
     top: 50%;
     right: 20px;
     transform: translateY(-50%) rotate(0deg);

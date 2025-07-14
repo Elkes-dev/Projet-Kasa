@@ -1,6 +1,6 @@
 import Slideshow from "../../components/Slideshow"
 import logement from '../../logement.json'
-import {useParams } from "react-router-dom"
+import {Navigate, useParams } from "react-router-dom"
 import Collapse from "../../components/Collapse";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,22 +10,24 @@ function Logement(){
    
    const{id} = useParams(); // ← id correspond à :id dans l’URL
 
-   /*const findLogement = logement.find((appart) => appart.id === id)*/
-
-   const [currentLogement, setLogement] = useState(null);
+   const [currentLogement, setLogement] = useState(undefined);
 
    
-
    useEffect(()=>{
             const findLogement = logement.find((appart) => appart.id === id)
-            setLogement(findLogement)
+            setLogement(findLogement|| null)
    }, [id]
 )
+if(currentLogement === undefined){
+    return <div>Chargement...</div>
+}
 
-
-if(!currentLogement) return <div></div>
+if(!currentLogement){
+     return   <Navigate to="/Error/" />}
 
 const ratingNumber = parseInt(currentLogement.rating);
+
+
     return(
         <>
         <div className="slideshow">

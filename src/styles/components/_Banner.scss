@@ -5,9 +5,12 @@
     max-width: 1440px;
     margin: 30px;
 
-        &-img{
+    &-img{
         border-radius: 16px;
         width: 100%;
+        @media (min-width: 375px) and (max-width: 768px){
+            aspect-ratio: 3/1;
+        }
     }
      &-text{
             color: $white-text;
@@ -17,5 +20,17 @@
             transform: translate(-50%, -50%);
             font-size: 39px;
             font-weight: bold;
+            @media(min-width: 375px) and (max-width: 768px){
+            left: 35%;
+            font-size: 30px;
         }
+        }
+       
+}
+
+.line-break{
+        display: none;
+        @media(min-width: 375px) and (max-width: 768px){
+                display:inline;
+    }
 }

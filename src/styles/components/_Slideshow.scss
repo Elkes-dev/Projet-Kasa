@@ -9,6 +9,10 @@
         width: 100%;
         aspect-ratio: 3/1;
         object-fit: cover;
+         @media (min-width: 375px) and (max-width: 768px){
+            width: 90%;
+            height: 300px;
+            }
         }
     .arrow-right,
     .arrow-left{
@@ -17,6 +21,10 @@
         color: $white-text;
         height: 80px;
         width: 45px;
+        display: inline;
+        @media (min-width: 375px) and (max-width: 768px){
+            display: none;
+        }
         }
     .arrow-right{
         right: 100px;
@@ -30,9 +38,12 @@
         position: absolute;
         bottom: 40px;
         left: 50%;
+        display: inline;
+        @media (min-width: 375px) and (max-width: 768px){
+            display: none;
         }
+        }        
 }
-
 
 .logement-header{
     display: flex;
@@ -52,11 +63,15 @@
         color: #000000;
         font-size: 18px;
         padding: 20px 0;
+        @media (min-width: 375px) and (max-width: 768px){
+            padding: 0;
+        }
         }
     }
+    @media (min-width: 375px) and (max-width: 768px){
+            flex-direction: column;
+        }
 }
-
-
 
 
 .tags ul{
@@ -69,7 +84,10 @@
         color: $white-text;
         border-radius: 20px;
         padding: 5px 10px;
-    }
+    @media (min-width: 375px) and (max-width: 768px){
+           white-space: nowrap;
+        }
+        }
 }
 
 .id-person{
@@ -81,8 +99,26 @@
     }
     .photo-person{
        clip-path: circle(50%);
+        @media (min-width: 375px) and (max-width: 768px){
+            width: 20%;
+        }
     }
+    @media (min-width: 375px) and (max-width: 768px){
+            justify-content: flex-end;
+            align-items: flex-end;
+            column-gap: 10px;
+        }
 }
+
+      @media (min-width: 375px) and (max-width: 768px){
+        .right-info{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+}
+
 
 .stars{
     padding-top: 10px;
@@ -93,4 +129,8 @@
     display: flex;
     column-gap: 30px;
     margin: 0 30px;
+    @media (min-width: 375px) and (max-width: 768px){
+            display: flex;
+            flex-direction: column;
+        }
 }

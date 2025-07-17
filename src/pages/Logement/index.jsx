@@ -15,7 +15,7 @@ function Logement(){
    
    useEffect(()=>{
             const findLogement = logement.find((appart) => appart.id === id)
-            setLogement(findLogement|| null)
+            setLogement(findLogement || null)
    }, [id]
 )
 if(currentLogement === undefined){
@@ -33,7 +33,6 @@ const ratingNumber = parseInt(currentLogement.rating);
         <div className="slideshow">
             <Slideshow  pictures={currentLogement.pictures} className="img-slideshow" />
             <div className="logement-header">   
-
                 <div className="left-info">
                     <h1 className="title-logement">{currentLogement.title}</h1>
                     <p className="location-logement">{currentLogement.location}</p>

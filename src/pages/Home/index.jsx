@@ -8,7 +8,7 @@ function Home(){
     return(
         <>
          <Banner image={HomeImage} 
-         alt='Home-Banner'
+          alt='Home-Banner'
           text={
             <>
             Chez vous,<br className="line-break"/> partout et ailleurs

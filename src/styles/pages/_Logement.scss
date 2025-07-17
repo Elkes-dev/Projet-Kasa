@@ -1,5 +1,7 @@
+@use '../abstracts/variables';
+
 .description-logement{
      margin: 5px auto;
-        background-color: $background-gallery;
+        background-color: variables.$background-gallery;
         width: 100%;
 }

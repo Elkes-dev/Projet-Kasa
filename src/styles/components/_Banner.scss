@@ -1,4 +1,4 @@
-
+@use '../abstracts/variables';
 
 .banner{
     position: relative;
@@ -8,19 +8,19 @@
     &-img{
         border-radius: 16px;
         width: 100%;
-        @media (min-width: 375px) and (max-width: 768px){
+        @media (min-width: 320px) and (max-width: 768px){
             aspect-ratio: 3/1;
         }
     }
      &-text{
-            color: $white-text;
+            color: variables.$white-text;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 39px;
             font-weight: bold;
-            @media(min-width: 375px) and (max-width: 768px){
+            @media(min-width: 320px) and (max-width: 768px){
             left: 35%;
             font-size: 30px;
         }
@@ -30,7 +30,7 @@
 
 .line-break{
         display: none;
-        @media(min-width: 375px) and (max-width: 768px){
+        @media(min-width: 320px) and (max-width: 768px){
                 display:inline;
     }
 }

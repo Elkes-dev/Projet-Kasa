@@ -1,7 +1,7 @@
-
+@use '../abstracts/variables';
 
 .footer{
-    background-color: $body-color;
+    background-color: variables.$body-color;
     margin-top: 100px;
     height: 150px;
     display: flex;
@@ -9,13 +9,13 @@
     align-items: center;
     justify-content: center;
     row-gap: 30px;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
         row-gap: 15px;
         margin-top: 15px;
     }        
     p{
-        color : $white-text;
-        @media (min-width: 375px) and (max-width: 768px){
+        color : variables.$white-text;
+        @media (min-width: 320px) and (max-width: 768px){
             font-size: 12px;
         }
     }
@@ -23,7 +23,7 @@
 
 .line-break-footer{
     display: none;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
             display: inline;
         }
 }

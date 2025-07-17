@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 .gallery{
     max-width: 1440px;
     margin: 30px;
@@ -5,9 +7,9 @@
     justify-content: center;
     column-gap:50px;
     grid-template-columns: repeat(3,25%);
-    background-color: $background-gallery;
+    background-color: variables.$background-gallery;
     border-radius: 16px;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
         display: flex;
         flex-direction: column;
         background-color: transparent;

@@ -1,5 +1,7 @@
-   .collapse{background-color: #FF6060;
-    color: $white-text;
+  @use '../abstracts/variables';
+  
+  .collapse{background-color: variables.$error-color;
+    color: variables.$white-text;
     border-radius: 5px;
     margin: auto;
     padding: 10px 20px 10px 15px;

@@ -1,11 +1,11 @@
-
+@use '../abstracts/variables';
 
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px;
+    padding: 30px;
     
     ul{
         list-style: none;
@@ -14,18 +14,18 @@
     
     li{ 
         & a{
-        color: $body-color;
+        color: variables.$body-color;
         text-decoration: none;
         border: 1px solid transparent;
         
         &.active {
-            border-bottom: 1px solid $body-color;
+            border-bottom: 1px solid variables.$body-color;
             cursor: default;
         }
             }
         }
     }
-    @media (min-width: 375px) and (max-width: 768px) {
+    @media (min-width: 320px) and (max-width: 768px) {
         & img{
             width: 30%;
         }

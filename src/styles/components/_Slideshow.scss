@@ -1,15 +1,24 @@
+@use '../abstracts/variables';
 
+.slideshow{
+    @media (min-width: 769px) {
+     /*   padding: 30px;*/
+    }
+}
 .logement-container{
     position: relative;
+    max-width: 1440px;
+margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
     .img-logement{
         border-radius: 16px;
         display: block;
         margin: 0 auto;
-        max-width: 1200px;
         width: 100%;
         aspect-ratio: 3/1;
         object-fit: cover;
-         @media (min-width: 375px) and (max-width: 768px){
+         @media (min-width: 320px) and (max-width: 768px){
             width: 90%;
             aspect-ratio: 16/9;
             }
@@ -18,20 +27,20 @@
     .arrow-left{
         position: absolute;
         top: 50%;
-        color: $white-text;
+        color: variables.$white-text;
         height: 80px;
         width: 45px;
         display: inline;
-        @media (min-width: 375px) and (max-width: 768px){
+        @media (min-width: 320px) and (max-width: 768px){
             display: none;
         }
         }
     .arrow-right{
-        right: 100px;
+        right: clamp(20px, 15%, 60px);
         transform: translate(50%,-50%);
         }
     .arrow-left{
-        left: 100px;
+        left: clamp(20px, 15%, 60px);
         transform: translate(-50%,-50%);
         }
     .rating{
@@ -39,7 +48,7 @@
         bottom: 40px;
         left: 50%;
         display: inline;
-        @media (min-width: 375px) and (max-width: 768px){
+        @media (min-width: 320px) and (max-width: 768px){
             display: none;
         }
         }        
@@ -62,12 +71,12 @@
         .location-logement{
         color: #000000;
         font-size: 18px;
-        @media (min-width: 375px) and (max-width: 768px){
+        @media (min-width: 320px) and (max-width: 768px){
             padding: 0;
         }
         }
     }
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
             flex-direction: column;
         }
 }
@@ -77,17 +86,17 @@
     display: flex;
     column-gap: 30px;
     padding-top: 10px;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
         flex-wrap: wrap;
            gap: 15px;
         }
     li{
         list-style: none;
-        background-color: $error-color;
-        color: $white-text;
+        background-color: variables.$error-color;
+        color: variables.$white-text;
         border-radius: 20px;
         padding: 5px 10px;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
            white-space: nowrap;
         }
         }
@@ -104,11 +113,11 @@
     .photo-person{
        clip-path: circle(50%);
        width: 30%;
-        @media (min-width: 375px) and (max-width: 768px){
+        @media (min-width: 320px) and (max-width: 768px){
             width: 20%;
         }
     }
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
             justify-content: flex-end;
             align-items: flex-end;
             column-gap: 10px;
@@ -120,7 +129,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
         
             flex-direction: row-reverse;
             justify-content: space-between;
@@ -138,7 +147,7 @@
     display: flex;
     column-gap: 30px;
     margin: 0 30px;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
             display: flex;
             flex-direction: column;
         }

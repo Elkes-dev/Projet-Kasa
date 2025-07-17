@@ -1,4 +1,4 @@
-
+@use '../abstracts/variables';
 
 *{
     margin: 0;
@@ -7,6 +7,8 @@
 }
 
 body{
-    font-family: $body-police;
+    font-family: variables.$body-police;
     max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
 }

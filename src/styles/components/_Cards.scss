@@ -1,3 +1,4 @@
+@use '../abstracts/variables';
 
 .card{
     border-radius: 10px;
@@ -5,7 +6,7 @@
     padding-top: 30px;
     position: relative;
     margin: 0;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
             padding-top: 15px;
             height: 300px;
         }
@@ -28,7 +29,7 @@
     }
     &-text{
         font-size: 16px;
-        color: $white-text;
+        color: variables.$white-text;
         position:absolute;
         bottom: 50px;
         left: 10px;

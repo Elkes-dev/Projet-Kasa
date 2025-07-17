@@ -1,18 +1,19 @@
+@use '../abstracts/variables';
+
 .collapse-wrapper{
     flex: 1;    
 }
 .collapse-wrapper.collapse-about{
     margin: 0 auto;
     width: 70%;
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
         width: 90%;
     }
 }
 
-
 .collapse{
-    background-color: #FF6060;
-    color: #FFFFFF;
+    background-color: variables.$error-color;
+    color: variables.$white-text;
     border-radius: 5px;
     margin: 0 auto;
     padding: 10px 20px 10px 15px;
@@ -20,9 +21,9 @@
     margin-bottom: 20px;
     &-text{
         margin: 5px auto;
-        background-color: $background-gallery;
+        background-color: variables.$background-gallery;
         width: 100%;
-        color: $body-color;
+        color: variables.$body-color;
         max-height: 0;
         opacity: 0;
         transform: translateY(-10px);

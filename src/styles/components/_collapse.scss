@@ -1,5 +1,5 @@
 @use '../abstracts/variables';
-
+/*
 .collapse-wrapper{
     flex: 1;    
 }
@@ -18,24 +18,28 @@
     margin: 0 auto;
     padding: 10px 20px 10px 15px;
     position: relative;
-    margin-bottom: 20px;
+    max-height: 200px;}
     &-text{
-        margin: 5px auto;
+         margin: 0; 
+        padding: 10px 15px ;  
         background-color: variables.$background-gallery;
         width: 100%;
         color: variables.$body-color;
         max-height: 0;
-        opacity: 0;
-        transform: translateY(-10px);
+    
+       
         overflow: hidden;
-        transition: max-height 0.5s ease, opacity 0.3s ease, transform 0.8s ease;
+        
     }
     &-text.open{
-        max-height: 500px;  /* assez grand pour couvrir tout ton texte */
-        opacity: 1;
-        transform: translateY(0);
+        max-height: 200px;
+        animation: slideDown 0.4s ease forwards;
+        padding-bottom: 15px;
     }
    }
+
+
+
 
    .collapse-logement-description, 
    .collapse-logement-equipements{
@@ -56,8 +60,88 @@
     .arrow-icon.rotate{
     transform: translateY(-50%) rotate(-360deg);
     transition: 0.3s ease;
+}*/
+
+.collapse-wrapper {
+  flex: 1;    
 }
 
+.collapse-wrapper.collapse-about {
+  margin: 0 auto;
+  width: 70%;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .collapse-wrapper.collapse-about {
+    width: 90%;
+  }
+}
 
+/* Barre rouge fixe, sans transformation */
+.collapse {
+  background-color: variables.$error-color;
+  color: variables.$white-text;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 5px !important;
+  padding-bottom: 2px;
+  padding: 10px 20px 10px 15px;
+  margin-bottom: 5px;
+  position: relative;
+  max-height: 200px;
+  /* plus de transform ici, donc pas de mouvement */
+  z-index: 10; /* barre au-dessus */
+}
 
-   
+/* Texte contenu */
+.collapse-text {
+  margin: 0; 
+  padding: 15px;  
+  background-color: variables.$background-gallery;
+  width: 100%;
+  color: variables.$body-color;
+  max-height: 0;
+  overflow: hidden;
+  
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  position: relative;
+  z-index: 5; /* dessous barre */
+}
+
+.collapse-text.open {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+  padding-bottom: 15px;
+}
+
+.collapse-text.close {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-80px);
+  padding-bottom: 0;
+}
+
+/* Style liste */
+.equipements ul li {
+  list-style: none;
+}
+
+/* Flèche */
+.arrow-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+  transform: translateY(-50%) rotate(-360deg);
+  transition: transform 0.3s ease;
+}

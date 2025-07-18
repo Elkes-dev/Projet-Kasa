@@ -5,7 +5,7 @@ import {HashRouter} from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter basename="/Projet-Kasa">
+    <HashRouter>
   <App />
 </HashRouter>
   </StrictMode>,

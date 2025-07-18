@@ -18,9 +18,12 @@ function Collapse({title, children, className=''}){
                     onClick={() => setOpen(!isOpen)}/>   
                     </div>
                 </div>
-                    <div className= {`collapse-text ${isOpen ? "open" : ""}`}>
-                        {children}
-                    </div>
+                    <div className= {`collapse-text ${isOpen ? "open" : "close"}`}>
+
+                        <div className="collapse-inner-text">
+      {children}
+    </div>
+  </div>
 
             </div>
         </>

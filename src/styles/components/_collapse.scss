@@ -24,7 +24,7 @@
     max-height: 200px;
     z-index: 10;
     &-text{
-         margin: 0; 
+        margin: 0; 
         padding: 10px 15px ;  
         background-color: variables.$background-gallery;
         width: 100%;
@@ -32,14 +32,13 @@
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-  transform: translateY(-20px);
-  transition:
-    max-height 0.4s ease,
-    opacity 0.4s ease,
-    transform 0.4s ease;
-  position: relative;
-  z-index: 5;  
-        
+        transform: translateY(-20px);
+        transition:
+        max-height 0.2s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
+        position: relative;
+        z-index: 5;  
     }
     &-text.open{
         max-height: 200px;
@@ -47,8 +46,7 @@
         transform: translateY(0);
         padding-bottom: 15px;
     }
-    &-text-close{
-    
+    &-text.close{
     max-height: 0;
     opacity: 0;
     transform: translateY(-80px);
@@ -83,7 +81,5 @@
     transform: translateY(-50%) rotate(-360deg);
     transition: 0.3s ease;
 }
-
-
 
 

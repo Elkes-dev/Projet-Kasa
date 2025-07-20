@@ -1,10 +1,12 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Collapse({title, children, className=''}){
 
     const [isOpen, setOpen] = useState(false)
+
+    const heightRef = useRef(null)
 
     return(
         <>

@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import {  faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Collapse({title, children, className=''}){
 
@@ -13,17 +13,16 @@ function Collapse({title, children, className=''}){
                     <div className='collapse-header'>
                     <h2 className="title-collapse">{title}</h2>
                     <FontAwesomeIcon 
-                    icon= {isOpen ?  faChevronDown : faChevronUp} 
-                    className={`arrow-icon ${isOpen ?  'rotate' : ""} `}
+                    icon= {faChevronUp} 
+                    className={`arrow-icon ${isOpen ?  'rotate' : "unrotate"} `}
                     onClick={() => setOpen(!isOpen)}/>   
                     </div>
                 </div>
                     <div className= {`collapse-text ${isOpen ? "open" : "close"}`}>
-
                         <div className="collapse-inner-text">
-      {children}
-    </div>
-  </div>
+                        {children}
+                        </div>
+                    </div>
 
             </div>
         </>

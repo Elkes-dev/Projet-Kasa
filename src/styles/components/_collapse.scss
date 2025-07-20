@@ -33,53 +33,57 @@
         overflow: hidden;
         opacity: 0;
         transform: translateY(-20px);
-        transition:
-        max-height 0.2s ease,
-        opacity 0.4s ease,
-        transform 0.4s ease;
+        transition: 
+            max-height 0.2s ease,
+            opacity 0.4s ease,
+            transform 0.4s ease;
         position: relative;
         z-index: 5;  
     }
     &-text.open{
         max-height: 200px;
+        height: 100%;
         opacity: 1;
         transform: translateY(0);
-        padding-bottom: 15px;
     }
     &-text.close{
     max-height: 0;
     opacity: 0;
     transform: translateY(-80px);
     padding-bottom: 0;
+    }
+    &-inner-text{
+    padding-top: 10px;
 }
 
-   }
+}
 
-
-
-
-   .collapse-logement-description, 
-   .collapse-logement-equipements{
+.collapse-logement-description, 
+.collapse-logement-equipements{
     width: 100%;
    }
       
-/* Liste */
+// Liste //
    .equipements ul li{
         list-style: none;
    }
         
-/* Flèche */
-   .arrow-icon{
-    position: absolute;
-    cursor: pointer;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%) rotate(0deg);
-    transition: 0.3s ease;
-   }
-    .arrow-icon.rotate{
-    transform: translateY(-50%) rotate(-360deg);
-    transition: 0.3s ease;
+
+
+// Flèche //
+ .arrow-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.5s ease;
+  &.rotate{
+    transform: translateY(-50%) rotate(-180deg); 
+  }
+  &.unrotate{
+    transform: translateY(-50%) rotate(0deg); 
+  }
 }
 
-
+  
